@@ -4,7 +4,7 @@ import ProductCard from '../ProductCard'
 import ProductsHeader from '../ProductsHeader'
 import './index.css'
 import FiltersGroup from '../FiltersGroup'
-
+import {BeatLoader} from 'react-spinners'
 const categoryOptions = [
   {
     name: 'Clothing',
@@ -72,7 +72,7 @@ const apiStatusConstants = {
 console.log('ProductCard =', ProductCard)
 console.log('ProductsHeader =', ProductsHeader)
 console.log('FiltersGroup =', FiltersGroup)
-console.log('BeatLoader =', BeatLoader)
+
 
 const AllProductsSection = () => {
   const [apiResponse, setApiResponse] = useState({
@@ -160,11 +160,11 @@ const AllProductsSection = () => {
     )
   }
 
-  // const renderLoadingView = () => (
-  //   <div className="products-loader-container">
-  //     <BeatLoader color="#7032a5" />
-  //   </div>
-  // )
+  const renderLoadingView = () => (
+    <div className="products-loader-container">
+      <BeatLoader color="#7032a5" />
+    </div>
+  )
 
   const renderFailureView = () => (
     <div className="products-error-view-container">
@@ -188,8 +188,8 @@ const AllProductsSection = () => {
         return renderProductsListView()
       case apiStatusConstants.failure:
         return renderFailureView()
-      // case apiStatusConstants.inProgress:
-      //   return renderLoadingView()
+      case apiStatusConstants.inProgress:
+        return renderLoadingView()
       default:
         return null
     }
