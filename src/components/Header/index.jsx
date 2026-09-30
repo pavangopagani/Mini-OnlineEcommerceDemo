@@ -16,9 +16,11 @@ const Header = () => {
       <div className="nav-content">
         <div className="nav-bar-mobile-logo-container">
           <Link to="/">
-            <div className="lg" >
-                <h1 className="log">My-SHop</h1>
-            </div>
+            <img
+              className="website-logo"
+              src="https://s3.ap-south-1.amazonaws.com/new-assets.ccbp.in/frontend/loading-data/niat_react_js/niat_coding_questions/nxt-trendz-logo.png"
+              alt="website logo"
+            />
           </Link>
 
           <button type="button" className="nav-mobile-btn">
@@ -32,9 +34,11 @@ const Header = () => {
 
         <div className="nav-bar-large-container">
           <Link to="/">
-            <div className="lg" >
-                <h1 className="log">My-SHop</h1>
-            </div>
+            <img
+              className="website-logo"
+              src="https://s3.ap-south-1.amazonaws.com/new-assets.ccbp.in/frontend/loading-data/niat_react_js/niat_coding_questions/nxt-trendz-logo.png"
+              alt="website logo"
+            />
           </Link>
           <ul className="nav-menu">
             <li className="nav-menu-item">

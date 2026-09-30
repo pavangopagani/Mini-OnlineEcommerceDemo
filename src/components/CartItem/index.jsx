@@ -4,26 +4,25 @@ import {AiFillCloseCircle} from 'react-icons/ai'
 import './index.css'
 
 const CartItem = props => {
-  const {
-    cartItemDetails,
-    incrementCartItemQuantity,
-    decrementCartItemQuantity,
-    removeCartItem,
-  } = props
+  const {cartItemDetails } = props
+
+  // incrementCartItemQuantity,
+  //   decrementCartItemQuantity,
+  //   removeCartItem,
 
   const {id, title, brand, quantity, price, imageUrl} = cartItemDetails
 
-  const onIncrement = () => {
-    incrementCartItemQuantity(id)
-  }
+  // const onIncrement = () => {
+  //   incrementCartItemQuantity(id)
+  // }
 
-  const onDecrement = () => {
-    decrementCartItemQuantity(id)
-  }
+  // const onDecrement = () => {
+  //   decrementCartItemQuantity(id)
+  // }
 
-  const onRemove = () => {
-    removeCartItem(id)
-  }
+  // const onRemove = () => {
+  //   removeCartItem(id)
+  // }
 
   return (
     <li className="cart-item">
@@ -43,7 +42,7 @@ const CartItem = props => {
           <button
             type="button"
             className="quantity-controller-button"
-            onClick={onDecrement}
+            
           >
             <BsDashSquare color="#52606D" size={12} />
           </button>
@@ -53,7 +52,7 @@ const CartItem = props => {
           <button
             type="button"
             className="quantity-controller-button"
-            onClick={onIncrement}
+           
           >
             <BsPlusSquare color="#52606D" size={12} />
           </button>
@@ -67,7 +66,7 @@ const CartItem = props => {
           <button
             className="remove-button"
             type="button"
-            onClick={onRemove}
+    
           >
             Remove
           </button>
@@ -77,7 +76,7 @@ const CartItem = props => {
       <button
         className="delete-button"
         type="button"
-        onClick={onRemove}
+
       >
         <AiFillCloseCircle
           color="#616E7C"

@@ -3,7 +3,6 @@ import Cookies from 'js-cookie'
 import BeatLoader from 'react-spinners/BeatLoader'
 import ProductCard from '../ProductCard'
 import './index.css'
-
 const PrimeDealsSection = () => {
     const [primeDealsData,setPrimeData]=useState([])
   useEffect(() => {
@@ -32,6 +31,8 @@ const PrimeDealsSection = () => {
     }
     getPrimeDeals()
   }, [])
+
+
 
 const renderLoadingView=()=>{
     <div className='loading-container'>

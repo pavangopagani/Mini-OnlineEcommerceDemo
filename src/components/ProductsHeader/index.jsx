@@ -4,11 +4,11 @@ const ProductsHeader = props => {
   const {
     sortbyOptions,
     activeOptionId,
-    updateActiveOptionId,
+    changeSortby,
   } = props
 
   const onChangeSortby = event => {
-    updateActiveOptionId(event.target.value)
+    changeSortby(event.target.value)
   }
 
   return (

@@ -1,4 +1,4 @@
-import {useState, useEffect, useContext} from 'react'
+import {useState, useEffect, use} from 'react'
 import {Link, useParams} from 'react-router-dom'
 import Cookies from 'js-cookie'
 import {BeatLoader} from 'react-spinners'
@@ -20,15 +20,15 @@ const apiStatusConstants = {
 const ProductItemDetails = () => {
   const [apiResponse, setApiResponse] = useState({
     status: apiStatusConstants.initial,
-    data: null,
+    data: [],
     errorMsg: null,
   })
-
   const [quantity, setQuantity] = useState(1)
 
   const {id} = useParams()
 
-  const {addCartItem} = useContext(CartContext)
+  const value=use(CartContext)
+  const {addCartItem} =value
 
   const onClickAddToCart = () => {
     const {data} = apiResponse
@@ -40,7 +40,6 @@ const ProductItemDetails = () => {
     })
   }
 
-  // remaining code...
   const getFormattedData = data => ({
     availability: data.availability,
     brand: data.brand,

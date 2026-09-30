@@ -16,7 +16,7 @@ const App = () => {
   const [cartList, setCartList] = useState([])
 console.log('APP CART:', cartList)
   const addCartItem = product => {
-    console.log('ADding',product)
+    console.log('Adding',product)
     setCartList(prevCartList => [...prevCartList, product])
   }
 
