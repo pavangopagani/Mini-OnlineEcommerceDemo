@@ -136,3 +136,12 @@
   line-height: 16px;
   color: #ff0b37;
 }
+
+.passwoed-area{
+  border:2px solid red;
+  padding:10px;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+}
